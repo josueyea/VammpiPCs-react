@@ -16,7 +16,6 @@ function App() {
       <Hero />
       <Products/>
       <Feature/>
-      <Stats/>
       <CTA/>
       <Footer/>
       <WhatsAppButton />

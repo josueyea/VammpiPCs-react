@@ -7,13 +7,13 @@ const Hero = () => {
         <h1>Construimos PCs Gaming de Alto Nivel</h1>
 
         <p>
-          Venta de computadoras, componentes y servicio técnico profesional
+          Venta de computadoras y servicio técnico profesional
           para gamers, streamers y empresas.
         </p>
 
         <div className="hero-buttons">
-          <a className="btn1" href="#products">Ver Productos</a>
-          <a className="btn2" href="#features">Servicio Técnico</a>
+          <a className="btn1" href="#cta">Solicitar Soporte</a>
+          <a className="btn2" href="#cta">Cotizar Ensamble</a>
         </div>
         <div className="hero-badges">
             <div className="badge">

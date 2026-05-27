@@ -1,3 +1,5 @@
+
+
 const CTA = () => {
   return (
     <section id="cta">
@@ -6,7 +8,9 @@ const CTA = () => {
         <p>
           Cotiza tu computadora personalizada y recibe asesoría profesional.
         </p>
-        <button className="cta-btn">Cotizar Ahora</button>
+        <a href="https://wa.me/51906034060?text=Hola,%20quiero%20cotizar%20una%20PC" target="_blank"       className="cta-btn">
+          Solicitar Servicio
+        </a>
       </div>
     </section>
   );

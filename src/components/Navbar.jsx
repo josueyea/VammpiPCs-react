@@ -13,7 +13,9 @@ const Navbar = () => {
 
   return (
     <header>
-      <img className="logo" src="/img/primer-logo.png" alt="logo de VampiPCs" />
+      <a className="logo" href="#hero">
+        <img className="logo" src="/img/primer-logo.png" alt="logo de VampiPCs" />
+      </a>
 
       <button
         className="menu-toggle"
@@ -33,14 +35,14 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#products" onClick={() => setIsMenuOpen(false)}>
-              Productos
-            </a>
-          </li>
-          <li>
-            <a href="#features" onClick={() => setIsMenuOpen(false)}>
               Servicios
             </a>
           </li>
+          {/* <li>
+            <a href="#features" onClick={() => setIsMenuOpen(false)}>
+              Servicios
+            </a>
+          </li> */}
           <li>
             <a href="#footer" onClick={() => setIsMenuOpen(false)}>
               Contacto
@@ -49,10 +51,10 @@ const Navbar = () => {
         </ul>
       </nav>
       <div className="nav-actions">
-        <a className="nav-cta" href="#cta">
+        <a href="https://wa.me/51906034060?text=Hola,%20quiero%20cotizar%20una%20PC" target="_blank"       className="nav-cta">
           Cotizar PC
         </a>
-        <i className="fa-solid fa-cart-shopping cart-icon"></i>
+        {/* <i className="fa-solid fa-cart-shopping cart-icon"></i> */}
       </div>
     </header>
   );

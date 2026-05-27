@@ -3,64 +3,48 @@ import ProductCard from "./ProductCard";
 
 const products = [
   {
-    image: "/img/pc-gamer.avif",
-    title: "Computadora Gamer",
-    description: "Potente computadora diseñada para juegos de alta calidad.",
-    price: "S/. 4,599",
-    category: "Gaming"
+    image: "https://images.pexels.com/photos/9242280/pexels-photo-9242280.jpeg",
+    title: "Mantenimiento Técnico",
+    description: "Limpieza, optimización, mejora y diagnóstico profesional para PCs y laptops.",
+    icon: "fa-solid fa-screwdriver-wrench",
+    whatsapp:
+    "https://wa.me/51906034060?text=Hola,%20quiero%20información%20sobre%20el%20servicio%20de%20Mantenimiento%20Técnico"  
   },
   {
-    image: "/img/laptop.avif",
-    title: "Laptop Ultrabook",
-    description: "Ligera y portátil, perfecta para el trabajo y el entretenimiento.",
-    price: "S/. 4,599",
-    category: "Laptops",
+    image: "https://images.pexels.com/photos/2225618/pexels-photo-2225618.jpeg",
+    title: "Asesoría Personalizada",
+    description: "Te ayudamos a elegir la mejor configuración según tu presupuesto y necesidades.",
+    icon: "fa-solid fa-comments",
+    whatsapp:
+    "https://wa.me/51906034060?text=Hola,%20quiero%20información%20sobre%20el%20servicio%20de%20Asesoría" 
   },
   {
-    image: "/img/setup-products.avif",
-    title: "Setup de Productos",
-    description: "Soluciones completas para configurar tu espacio de trabajo.",
-    price: "S/. 4,599",
-    category: "Setup",
+    image: "/img/pc-gamer-hero.png",
+    title: "Ensamble de PCs",
+    description: "Armamos computadoras gaming, streaming y trabajo de alto rendimiento.",
+    icon: "fa-solid fa-computer",
+    whatsapp:
+    "https://wa.me/51906034060?text=Hola,%20quiero%20información%20sobre%20el%20servicio%20de%20Ensamble%20de%20PC" 
   },
 ];
 
-const categories = ["Todos", "Gaming", "Laptops", "Setup"];
-
 const Products = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Todos");
-
-  const filteredProducts =
-    selectedCategory === "Todos"
-      ? products
-      : products.filter((product) => product.category === selectedCategory);
-
   return (
     <section id="products">
       <span className="section-tag">
-        NUESTROS PRODUCTOS
+        NUESTROS SERVICIOS
       </span>
-      <h2>Productos Destacados</h2>
-
-      <div className="category-buttons">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      <h2>Servicios Destacados</h2>
 
       <div className="product-list">
-        {filteredProducts.map((product, index) => (
+        {products.map((product, index) => (
           <ProductCard
             key={index}
             image={product.image}
             title={product.title}
-            price={product.price}
             description={product.description}
+            icon={product.icon}
+            whatsapp={product.whatsapp}
           />
         ))}
       </div>
